@@ -42,5 +42,15 @@ public class ProductLoader implements ApplicationListener<ContextRefreshedEvent>
         productRepository.save(mug);
 
         log.info("Saved Mug - id:" + mug.getId());
+
+
+        Product banan = new Product();
+        banan.setDescription("Banan");
+        banan.setImageUrl("https://nashzeleniymir.ru/wp-content/uploads/2016/07/%D0%A1%D0%BE%D1%80%D1%82-%D0%B1%D0%B0%D0%BD%D0%B0%D0%BD%D0%B0-%D0%90%D0%B9%D1%81-%D0%BA%D1%80%D0%B8%D0%BC-Ice-CreamCenizoKrie-768x598.jpg");
+        banan.setProductId("1001");
+        banan.setPrice(new BigDecimal("67.95"));
+        productRepository.save(banan);
+
+        log.info("Saved banan - id:" + banan.getId());
     }
 }
